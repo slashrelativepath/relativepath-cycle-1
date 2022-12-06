@@ -22,3 +22,5 @@ connect to the vm
 install the webserver
 
 test the webserver
+
+brew install --cask multipass
