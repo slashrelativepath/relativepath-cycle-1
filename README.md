@@ -72,6 +72,8 @@ You will need either Hyper-V enabled (only Windows 10 Professional or Enterprise
 <br>
 <br>
 
+`choco install virtualbox multipass`
+
 #### Run
 
 <br>
