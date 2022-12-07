@@ -98,3 +98,25 @@ You’ve installed Multipass. Time to run your first commands! Use **multipass v
 To install Multipass, simply execute:
 <br>
 <pre>$ snap install multipass</pre>
+
+## Provioning an Ubuntu VM
+
+This is the command format / usage to create and provision an Ubuntu VM with a custom number of CPUs, disk, and RAM size:
+
+~~~
+multipass launch --cpus 4 --disk 20G --mem 8G
+~~~
+
+Here is the command to create a VM named `slick-machine` that shares wifi network with the host and has these properties:
+
+- 1 CPU
+- 20GB Hard Disk space
+- 2GB RAM
+
+~~~
+muLtipass launch --network Wi-Fi --cpus 1 --disk 20G --mem 2G --name slick-machine
+~~~
+
+**NOTE:** VM creation will fail if disk isn't at least 20G.
+
+**NOTE:** Some Windows install don't install the bridged router (wifi)
