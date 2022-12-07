@@ -34,7 +34,7 @@ Chocolatey is a machine-level, command-line package manager and installer for Wi
 
 Paste the following command in into your shell and press Enter
 
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
 
@@ -49,7 +49,7 @@ Homebrew is a free and open-source software package management system that simpl
 
 Paste the following command in a macOS Terminal or Linux shell prompt
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 The script explains what it will do and then pauses before it does it. 
 
@@ -72,14 +72,14 @@ You will need either Hyper-V enabled (only Windows 10 Professional or Enterprise
 
 
 
-`choco install virtualbox multipass`
+	choco install virtualbox multipass
 
 #### Run
 
 
 Multipass defaults to using Hyper-V as its virtualization provider. If you’d like to use VirtualBox, start either Command Prompt (cmd.exe) or PowerShell as Administrator and run:
 
-C:\WINDOWS\system32> multipass set local.driver=virtualbox
+	C:\WINDOWS\system32> multipass set local.driver=virtualbox
 
 Now, to run normal Multipass commands, open either Command Prompt (cmd.exe) or PowerShell as a regular user. Use multipass version to check your version or multipass launch to create your first instance.
 
@@ -88,15 +88,15 @@ Now, to run normal Multipass commands, open either Command Prompt (cmd.exe) or P
 
 To install Multipass, simply execute:
 
-$ brew install --cask multipass
+	$ brew install --cask multipass
 
 You’ve installed Multipass. Time to run your first commands! Use **multipass version** to check your version or **multipass launch** to create your first instance.
 
-### Linux Installation
-
-
+# Linux Installation
 ## snap
-## RedHat
+
+
+### RedHat
 
 
 To install Multipass, simply execute:
