@@ -106,3 +106,12 @@ To install Multipass, simply execute:
 	$ sudo systemctl enable --now snapd.socket
 	$ sudo ln -s /var/lib/snapd/snap /snap
 	$ snap install multipass
+
+### ***The inevitible problems***
+
+Because I'm not hip with the times and still run centOS 7 I run into problems pretty commonly.
+The lastest cool thing is most likely not available namely kernels.
+I'm on `3.10` and the multipass minimum requirement is `3.17` [ticket](https://github.com/canonical/multipass/issues/2178)
+
+If you want to explore into Elrepo to update you kernel, visit [here](http://elrepo.org/tiki/HomePage)
+
