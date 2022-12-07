@@ -56,9 +56,14 @@ The script explains what it will do and then pauses before it does it.
 Read about other [installation options](https://docs.brew.sh/Installation)
 <br>
 <br>
-
+*** add brew to path
+``` 
+    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/oscar/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/oscar/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 # **Installing Multipass**
 
+```
 <br>
 
 ### Windows Installation
