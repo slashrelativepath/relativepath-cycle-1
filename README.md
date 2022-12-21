@@ -95,3 +95,10 @@ muLtipass launch --network Wi-Fi --cpus 1 --disk 20G --mem 2G --name slick-machi
 **NOTE:** VM creation will fail if disk isn't at least 20G.
 
 **NOTE:** Some Windows install don't install the bridged router (wifi)
+
+---
+## Provision a VM
+`multipass launch --name infradog --cloud-init cloud-init.yaml && ssh -i id_ed25519 oscar@192.168.64.10`
+
+## Delete a VM
+`multipass delete infradog && multipass purge`
