@@ -42,6 +42,8 @@ choco install virtualbox multipass
 
 ## **macOS**
 
+`zsh webserver.zsh`
+
 ### Install Homebrew
 
 Paste the following command in a macOS Terminal
@@ -70,9 +72,7 @@ $ brew install --cask multipass
 
 #### **Install Multipass**
 
-run:
-
-`snap install multipass`
+`bash webserver.sh`
 
 ## Provioning an Ubuntu VM
 
