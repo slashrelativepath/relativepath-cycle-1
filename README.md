@@ -42,13 +42,7 @@ choco install virtualbox multipass
 
 ## **macOS**
 
-### Install Homebrew
-
-Paste the following command in a macOS Terminal
-
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
+`zsh webserver.zsh`
 
 ### add brew to path
 
