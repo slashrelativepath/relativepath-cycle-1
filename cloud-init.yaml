@@ -1,7 +1,0 @@
-users:
-  - default
-  - name: oscar
-    sudo: ALL=(ALL) NOPASSWD:ALL
-    shell: /bin/bash
-    ssh_authorized_keys:
-    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEMna9CNseOvyyGgqFpxAvUH81Jsj5gsWAwv0iOCWEOQ ofelix60@gmail.com 
