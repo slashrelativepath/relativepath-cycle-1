@@ -1,7 +1,8 @@
 users:
   - default
-  - name: oscar
+  - name: jason
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
     ssh_authorized_keys:
-    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEMna9CNseOvyyGgqFpxAvUH81Jsj5gsWAwv0iOCWEOQ ofelix60@gmail.com 
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIILXwrWhSIFVddXFL6vKaKYctiTLTXNlGDq93Qe4EEiN jasondoze@jd.attlocal.net
+      

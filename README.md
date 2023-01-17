@@ -1,98 +1,69 @@
-# Underdog Devs Devops Class I
+# **Underdog Devs Devops Class I**
 
-We want a local vm that is Ubuntu that is running an nginx webserver
-from
-local
-windows
-osx
-ubuntu
+## Goal- create local Ubuntu VM running an NginX webserver from:
+* Windows
+* Osx
+* Ubuntu
 
-# usage
+&nbsp;
 
-install git
+# Usage
 
-clone the repo
+- install git
 
-install a hypervisor
+- clone the repo
 
-write a file or command the provisions a ubuntu vm
+- install a hypervisor
 
-connect to the vm
+- write a file or command the provisions an ubuntu vm
 
-install the webserver
+- connect to the vm
 
-test the webserver
+- install the webserver
+
+- test the webserver
+
+&nbsp;
 
 ## **Windows**
+---
 
-### Install Chocolatey
+### Run command to launch:
 
-```
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+`webserver.ps1`
 
-```
+&nbsp;
 
-### Install Multipass
+### Run command to destroy:
 
-run:
 
-```
-choco install virtualbox multipass
-```
 
-## **macOS**
+&nbsp;
 
-`zsh webserver.zsh`
+## **MacOS**
+---
 
-### add brew to path
+### Run command to launch:
 
-```
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/oscar/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/oscar/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-```
+`zsh deploy-webserver.zsh`
 
-### **Install Multipass**
+&nbsp;
 
-run:
+### Run command to destroy:
 
-```
-$ brew install --cask multipass
-```
+`destroy-wevserver.zsh`
+
+&nbsp;
 
 ## **Linux**
-
-#### **Install Multipass**
-
-run:
-
-`snap install multipass`
-
-## Provioning an Ubuntu VM
-
-This is the command format / usage to create and provision an Ubuntu VM with a custom number of CPUs, disk, and RAM size:
-
-~~~
-multipass launch --cpus 4 --disk 20G --mem 8G
-~~~
-
-Here is the command to create a VM named `slick-machine` that shares wifi network with the host and has these properties:
-
-- 1 CPU
-- 20GB Hard Disk space
-- 2GB RAM
-
-~~~
-muLtipass launch --network Wi-Fi --cpus 1 --disk 20G --mem 2G --name slick-machine
-~~~
-
-**NOTE:** VM creation will fail if disk isn't at least 20G.
-
-**NOTE:** Some Windows install don't install the bridged router (wifi)
-
 ---
-## Provision a VM
-`multipass launch --name infradog --cloud-init cloud-init.yaml && ssh -i id_ed25519 oscar@192.168.64.10`
 
-## Delete a VM
-`multipass delete infradog && multipass purge`
+### Run command to launch:
+
+
+
+&nbsp;
+
+
+### Run command to destroy:
+
