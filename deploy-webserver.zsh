@@ -34,10 +34,10 @@ fi
 
 
 # Create cloud-init yaml with public SSH key and user name
-echo "      - $(cat id_ed25519.pub)" >> cloud-init.yaml
+echo "      - $(cat id_ed25519.pub)" >> cloud-init.yaml  
 
 # Check multipass list results for vm name and send to null
-if ( multipass list | grep infradog | grep Running > /dev/null ) 
+if ( multipass list | grep infradog > /dev/null ) 
 then
   echo -e "\n==== Infradog VM exists ====\n"
 else 
