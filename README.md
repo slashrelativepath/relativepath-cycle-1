@@ -5,8 +5,6 @@
 * Osx
 * Ubuntu
 
-
-
 # Usage
 
 - install git
@@ -23,47 +21,33 @@
 
 - test the webserver
 
-
-
-## **Windows**
 ---
+## **Windows**
 
 ### Run command to launch:
 
 `webserver.ps1`
 
-
-
 ### Run command to destroy:
 
-
-
-
-
-## **MacOS**
 ---
+## **MacOS**
 
 ### Run command to launch:
 
 `zsh deploy-webserver.zsh`
 
-
-
 ### Run command to destroy:
 
 `destroy-wevserver.zsh`
 
-
-
-## **Linux**
 ---
+## **Linux**
 
 ### Run command to launch:
 
-
-
-
-
+`bash webserver.sh`
 
 ### Run command to destroy:
 
+`bash webserver_destroy.sh`
