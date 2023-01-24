@@ -1,8 +1,13 @@
 users:
   - default
-  - name: jason
+  - name: infradog
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
     ssh_authorized_keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIILXwrWhSIFVddXFL6vKaKYctiTLTXNlGDq93Qe4EEiN jasondoze@jd.attlocal.net
-      
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGH6x0pHoHzD4TNoxsvtVLznufwJsz9T7GmOTQK+IiFV infradog@underdogs.dev
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPVk9DXRJtKQ0+y8JlGyikjY4LhhEkr+g30gQJkUjst2 “infradog@underdog.dev”
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPVk9DXRJtKQ0+y8JlGyikjY4LhhEkr+g30gQJkUjst2 “infradog@underdog.dev”
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPVk9DXRJtKQ0+y8JlGyikjY4LhhEkr+g30gQJkUjst2 “infradog@underdog.dev”
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPVk9DXRJtKQ0+y8JlGyikjY4LhhEkr+g30gQJkUjst2 “infradog@underdog.dev”
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPVk9DXRJtKQ0+y8JlGyikjY4LhhEkr+g30gQJkUjst2 “infradog@underdog.dev”
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN8G82Fqu4y/DwSUo7hGdOtXQd70ICQOCB80lD5CpROU infradog@underdogs.dev

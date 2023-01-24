@@ -23,16 +23,28 @@ else
   echo -e "\n==== Installing multipass ====\n"
 fi
 
+# Create SSH key pair
+if [ -f id_ed25519 ]
+then 
+  echo -e "\n==== SSH key pair present ====\n"
+else
+  echo -e "\n==== Creating SSH key pair ====\n"
+  ssh-keygen -t ed25519 -q -f id_ed25519 -C "infradog@underdogs.dev" -N ""
+fi
+
+
+# Create cloud-init yaml with public SSH key and user name
+echo "      - $(cat id_ed25519.pub)" >> cloud-init.yaml  
+
 # Check multipass list results for vm name and send to null
-if ( multipass list | grep Infradog | grep Running > /dev/null ) 
+if ( multipass list | grep infradog > /dev/null ) 
 then
   echo -e "\n==== Infradog VM exists ====\n"
 else 
   # Create VM
   echo -e "\n==== Creating Infradog VM ====\n"
-  multipass launch  --name Infradog  
+  multipass launch  --name infradog  --cloud-init cloud-init.yaml
 fi 
 
-multipass list
-
-multipass shell Infradog
+# Use SSH with keys to log in to the VM
+ssh -i id_ed25519 infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}')

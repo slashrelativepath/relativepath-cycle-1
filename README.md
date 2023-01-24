@@ -5,7 +5,7 @@
 * Osx
 * Ubuntu
 
-&nbsp;
+
 
 # Usage
 
@@ -23,7 +23,7 @@
 
 - test the webserver
 
-&nbsp;
+
 
 ## **Windows**
 ---
@@ -32,13 +32,13 @@
 
 `webserver.ps1`
 
-&nbsp;
+
 
 ### Run command to destroy:
 
 
 
-&nbsp;
+
 
 ## **MacOS**
 ---
@@ -47,13 +47,13 @@
 
 `zsh deploy-webserver.zsh`
 
-&nbsp;
+
 
 ### Run command to destroy:
 
 `destroy-wevserver.zsh`
 
-&nbsp;
+
 
 ## **Linux**
 ---
@@ -62,7 +62,7 @@
 
 
 
-&nbsp;
+
 
 
 ### Run command to destroy:
