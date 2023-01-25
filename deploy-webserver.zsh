@@ -1,26 +1,40 @@
-#!/bin/zsh
+#!/bin/env bash
 
 # A script to provision, install, and log in to a webserver on Mac OS.
 
-# The default password prompt timeout for the sudoers security policy is 5 minutes
-sudo true
-
-# Install Brew
-if ( which brew > /dev/null ) 
-then
-  echo -e "\n==== Brew installed ====\n"
-else 
-  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo -e "\n==== Installing Brew ====\n"
-fi
-
-# Install Multipass
-if ( which multipass > /dev/null )
+if [ "$(uname -s)" = "Darwin" ]
 then 
-  echo -e "\n==== Multipass installed ====\n"
+  # The default password prompt timeout for the sudoers security policy is 5 minutes
+  sudo true
+
+    # Install Brew
+  if ( which brew > /dev/null ) 
+  then
+    echo -e "\n==== Brew installed ====\n"
+  else 
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo -e "\n==== Installing Brew ====\n"
+  fi
+
+  # Install Multipass
+  if ( which multipass > /dev/null )
+  then 
+    echo -e "\n==== Multipass installed ====\n"
+  else
+    brew install --cask multipass
+    echo -e "\n==== Installing multipass ====\n"
+  fi
+elif [ "$(uname -s)" = "Linux" ]
+then 
+  # If multipass is present
+  if ( command -v multipass )
+  then
+    echo "Multipass is already installed."
+  else 
+    sudo snap install multipass
+  fi
 else
-  brew install --cask multipass
-  echo -e "\n==== Installing multipass ====\n"
+  echo "architecture unsupported."
 fi
 
 # Create SSH key pair
