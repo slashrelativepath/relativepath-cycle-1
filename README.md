@@ -35,11 +35,11 @@
 
 ### Run command to launch:
 
-`zsh deploy-webserver.zsh`
+`zsh webserver.sh`
 
 ### Run command to destroy:
 
-`destroy-wevserver.zsh`
+`zsh destroy-webserver.zsh`
 
 ---
 ## **Linux**
@@ -50,4 +50,4 @@
 
 ### Run command to destroy:
 
-`bash webserver_destroy.sh`
+`bash destroy-webserver.sh`
