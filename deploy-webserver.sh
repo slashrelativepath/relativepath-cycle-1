@@ -61,4 +61,4 @@ else
 fi 
 
 # Use SSH with keys to log in to the VM
-ssh -i id_ed25519 infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}')
+ssh -i id_ed25519 -o StrictHostKeyChecking=no infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}')

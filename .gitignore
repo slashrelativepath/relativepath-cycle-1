@@ -1,1 +1,6 @@
+# ssh keys
 id_ed25519*
+
+# emacs
+*~
+\#*\#
