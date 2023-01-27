@@ -17,3 +17,5 @@ fi
 echo -e "\n==== Deleted SSH keys ====\n"
 rm id_ed25519*
 
+# Remove yaml file
+rm cloud-init.yaml
