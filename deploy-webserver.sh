@@ -48,7 +48,21 @@ fi
 
 
 # Create cloud-init yaml with public SSH key and user name
-echo "      - $(cat id_ed25519.pub)" >> cloud-init.yaml  
+if [ -f cloud-init.yaml ]
+then 
+  echo -e "\n==== Cloud-init exists ====\n"
+else
+  echo -e "\n==== Creating cloud-init ====\n"
+  cat <<- EOF > cloud-init.yaml
+users:
+  - default
+  - name: infradog
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - $(cat id_ed25519.pub)
+EOF
+fi
 
 # Check multipass list results for vm name and send to null
 if ( multipass list | grep infradog > /dev/null ) 

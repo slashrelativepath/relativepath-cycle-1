@@ -22,20 +22,11 @@
 - test the webserver
 
 ---
-## **Windows**
-
-### Run command to launch:
-
-`webserver.ps1`
-
-### Run command to destroy:
-
----
 ## **MacOS**
 
 ### Run command to launch:
 
-`zsh webserver.sh`
+`zsh deploy-webserver.sh`
 
 ### Run command to destroy:
 
@@ -46,8 +37,17 @@
 
 ### Run command to launch:
 
-`bash webserver.sh`
+`bash deploy-webserver.sh`
 
 ### Run command to destroy:
 
 `bash destroy-webserver.sh`
+
+---
+## **Windows**
+
+### Run command to launch:
+
+`webserver.ps1`
+
+### Run command to destroy:
