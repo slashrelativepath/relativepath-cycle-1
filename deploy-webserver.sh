@@ -74,5 +74,11 @@ else
   multipass launch  --name infradog  --cloud-init cloud-init.yaml
 fi 
 
+# Copy Nginx install script to VM
+scp -i ./id_ed25519 -o StrictHostKeyChecking=no install-webserver.sh infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}'):/home/infradog
+
+# Run Install webserver inside VM
+ssh -i id_ed25519 -o StrictHostKeyChecking=no infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}') 'bash install-webserver.sh'
+
 # Use SSH with keys to log in to the VM
 ssh -i id_ed25519 -o StrictHostKeyChecking=no infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}')
