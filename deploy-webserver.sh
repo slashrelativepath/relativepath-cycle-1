@@ -61,7 +61,7 @@ else
 fi 
 
 # Copy Nginx install script to VM
-scp -i ./id_ed25519 install-webserver.sh infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}'):/home/infradog
+scp -i ./id_ed25519 -o StrictHostKeyChecking=no install-webserver.sh infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}'):/home/infradog
 
 # Run Install webserver inside VM
 ssh -i id_ed25519 -o StrictHostKeyChecking=no infradog@$(multipass info infradog | grep IPv4 | awk '{print $2}') 'bash install-webserver.sh'
